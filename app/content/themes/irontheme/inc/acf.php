@@ -17,8 +17,8 @@ function ith_acf_json_load_point( $paths ) {
 }
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page(array(
-		'page_title' 	=> 'Настройки темы',
-		'menu_title'	=> 'Настройки темы',
+		'page_title' 	=> 'Theme Settings',
+		'menu_title'	=> 'Theme Settings',
 		'menu_slug' 	=> 'theme-settings',
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false

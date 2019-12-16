@@ -1,0 +1,112 @@
+.hero
+  .container
+    position: relative
+  &__left
+    +col
+    +size(5)
+    +size-lg(6)
+    +size-sm(12)
+    padding-top: 9.5rem
+    padding-bottom: 4rem
+    +md-block
+      padding-top: 5rem
+    +sm-block
+      text-align: center
+    .btn
+      margin-top: 5.5rem
+  &__suptitle
+    margin: 0
+    text-transform: uppercase
+    color: $accent
+    font-family: $second-font
+    font-size: 4rem
+    font-weight: 700
+    +md-block
+      font-size: 3rem
+    +sm-block
+      font-size: 2.5rem
+  &__descr
+    position: relative
+    padding-left: 6.5rem
+    +sm-block
+      max-width: 35rem
+      margin: 0 auto
+      text-align: left
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 3.3rem
+      height: 7.8rem
+      background: url(images/general/tree.svg) no-repeat center / contain
+    p
+      font-size: 2.6rem
+      line-height: 1.4
+      +md-block
+        font-sie: 1.9rem
+      +sm-block
+        font-size: 1.6rem
+      &:last-child
+        margin-bottom: 0
+  &__bg
+    position: absolute
+    right: -34rem
+    top: -3rem
+    z-index: -1
+    pointer-events: none
+    +sm-block
+      top: auto
+      bottom: 0
+      right: -17rem
+      width: 130vw
+      max-width: 70rem
+  &__video
+    +col
+    +size(7)
+    +size-lg(6)
+    +size-sm(12)
+    align-self: flex-end
+    +lg-block
+      align-self: center
+    &-cta
+      position: relative
+      font-family: $second-font
+      font-size: 2.2rem
+      color: rgba($main-color, 0.5)
+      line-height: 1.3
+      &::after
+        content: ''
+        position: absolute
+        top: 50%
+        left: 95%
+        width: 14rem
+        height: 7.8rem
+        background: url(images/general/arrow-curv.svg) no-repeat center / contain
+        +sm-block
+          width: 10rem
+    &-link
+      position: relative
+      display: block
+      width: 79rem
+      margin-top: 2rem
+      +lg-block
+        width: 60rem
+      +sm-block
+        width: auto
+      &::before
+        content: ''
+        position: absolute
+        top: 56%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 13rem
+        height: 13rem
+        background: url(images/general/play-btn.svg) no-repeat center / contain
+        +trans
+        +sm-block
+          width: 8rem
+          height: 8rem
+      &:hover
+        &::before
+          transform: translate(-50%, -50%) scale(1.1)
