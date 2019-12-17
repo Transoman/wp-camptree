@@ -18,6 +18,8 @@
     p
       font-size: 1.8rem
       line-height: 1.5
+      &:last-child
+        margin-bottom: 0
   &__icon
     position: absolute
     top: 0
@@ -25,3 +27,12 @@
     transform: translateX(-50%)
   &__title
     margin-bottom: 1.5rem
+  &--text-left
+    .advantages-list
+      &__item
+        +from(768px)
+          text-align: left
+      &__icon
+        +from(768px)
+          left: 0
+          transform: none

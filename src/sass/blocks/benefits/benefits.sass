@@ -1,0 +1,36 @@
+.benefits
+  .container
+    position: relative
+    z-index: 1
+  .section-head
+    +from(993px)
+      margin-bottom: 7.5rem
+      .section-title + .section-subtitle
+        padding-left: 16%
+  .advantages-list
+    padding-bottom: 23rem
+    +md-block
+      padding-bottom: 8rem
+  &__bg
+    position: absolute
+    top: -6rem
+    right: -33rem
+    z-index: -1
+    pointer-events: none
+    +md-block
+      top: 13rem
+      right: -23rem
+    +sm-block
+      top: auto
+      bottom: 5rem
+    +xs-block
+      right: -40vw
+  &__bg-2
+    position: absolute
+    bottom: 0
+    left: -12rem
+    pointer-events: none
+    +md-block
+      width: 50%
+    +sm-block
+      left: 0

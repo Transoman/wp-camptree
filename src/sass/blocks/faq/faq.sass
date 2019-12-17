@@ -1,0 +1,81 @@
+.faq
+  .container
+    position: relative
+    z-index: 1
+  .section-title
+    +from(768px)
+      margin-bottom: 5rem
+  &__bg
+    position: absolute
+    right: -10rem
+    bottom: 0
+    z-index: -1
+    pointer-events: none
+    +sm-block
+      right: -10vw
+      width: 50%
+    +xs-block
+      right: 0
+
+
+.faq-list
+  padding: 0 10rem 13rem
+  +lg-block
+    padding-right: 0
+    padding-left: 0
+  &__item
+    +col
+    +size(6)
+    +size-md(12)
+    align-self: flex-start
+    margin-bottom: 3rem
+    border: 0.15rem dashed rgba($main-color, 0.25)
+    border-radius: 2.5rem
+    background-color: #fff
+    +md-block
+      &:last-child
+        margin-bottom: 0
+    +sm-block
+      border-radius: 1.5rem
+    &.active
+      .faq-list
+        &__title
+          &:hover
+            svg
+              transform: rotate(180deg)
+        &__toggle
+          svg
+            transform: rotate(180deg)
+  &__title
+    position: relative
+    margin: 0
+    padding: 4rem 6rem 4rem 4rem
+    font-size: 2.4rem
+    cursor: pointer
+    +lg-block
+      font-size: 2.2rem
+    +sm-block
+      padding: 2rem 6rem 2rem 2rem
+      font-size: 1.8rem
+    &:hover
+      svg
+        transform: rotate(25deg)
+  &__toggle
+    position: absolute
+    top: 50%
+    right: 2rem
+    transform: translateY(-50%)
+    svg
+      width: 1.6rem
+      height: 1.6rem
+      fill: $accent
+      +trans
+  &__content
+    display: none
+    padding: 0 4rem 3rem
+    color: rgba($main-color, 0.8)
+    +sm-block
+      padding: 0 2rem 1.5rem
+    p
+      &:last-child
+        margin-bottom: 0

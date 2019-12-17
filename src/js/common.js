@@ -71,10 +71,33 @@ jQuery(document).ready(function($) {
     }
   });
 
+  // Accordion
+  let accordion = function(item) {
+    let el = $(item);
+    let elTitle = el.find('h3');
+    let content = elTitle.next();
+
+    el.find('.active').find(content).slideDown(500);
+
+    elTitle.click(function() {
+      if ($(this).parent().hasClass('active')) {
+        $(this).parent().removeClass('active');
+        $(this).next().slideUp(500);
+      }
+      else {
+        $(this).parent().addClass('active');
+        content.not($(this).next()).slideUp(500);
+        elTitle.not($(this)).parent().removeClass('active');
+        $(this).next().slideDown(500);
+      }
+    });
+  };
+
 
   toggleNav();
   initModal();
   inputMask();
+  accordion('.faq-list');
 
   // SVG
   svg4everybody({});

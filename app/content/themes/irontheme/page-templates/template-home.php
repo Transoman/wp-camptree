@@ -282,6 +282,78 @@ if ( have_rows('home_layout') ):
 
         </div>
       </section>
+
+    <?php elseif ( get_row_layout() == 'benefits' ): ?>
+
+      <section class="benefits">
+        <div class="container">
+
+          <div class="section-head">
+            <?php $title = get_sub_field( 'title' );
+            $subtitle = get_sub_field( 'subtitle' );
+
+            if ($title): ?>
+              <h2 class="section-title"><?php echo $title; ?></h2>
+            <?php endif; ?>
+
+            <?php if ($subtitle): ?>
+              <h3 class="section-subtitle"><?php echo $subtitle; ?></h3>
+            <?php endif; ?>
+          </div>
+
+          <?php if (have_rows( 'list' )): ?>
+            <div class="advantages-list advantages-list--text-left row">
+              <?php while (have_rows( 'list' )): the_row(); ?>
+                <div class="advantages-list__item">
+                  <?php $icon = get_sub_field( 'icon' );
+                  if ($icon): ?>
+                    <img src="<?php echo $icon; ?>" width="90" alt="" class="advantages-list__icon">
+                  <?php endif; ?>
+
+                  <h3 class="advantages-list__title"><?php the_sub_field( 'title' ); ?></h3>
+                  <?php the_sub_field( 'description' ); ?>
+
+                </div>
+              <?php endwhile; ?>
+            </div>
+          <?php endif; ?>
+
+          <img src="<?php echo THEME_URL; ?>/images/general/benefits-bg.svg" class="benefits__bg" alt="">
+          <img src="<?php echo THEME_URL; ?>/images/general/reviews-bg-2.svg" class="benefits__bg-2" alt="">
+
+        </div>
+      </section>
+
+    <?php elseif ( get_row_layout() == 'faq' ): ?>
+
+    <?php $faqs = get_any_post( 'faq', -1 );
+
+      if ($faqs->have_posts()): ?>
+        <section class="faq">
+          <div class="container">
+            <?php $title = get_sub_field( 'title' );
+
+            if ($title): ?>
+              <h2 class="section-title text-center"><?php echo $title; ?></h2>
+            <?php endif; ?>
+
+            <div class="faq-list row">
+              <?php while ($faqs->have_posts()): $faqs->the_post(); ?>
+                <div class="faq-list__item">
+                  <h3 class="faq-list__title">
+                    <?php the_title(); ?>
+                    <span class="faq-list__toggle"><?php ith_the_icon( 'arrow-down' ); ?></span>
+                  </h3>
+                  <div class="faq-list__content"><?php the_content(); ?></div>
+                </div>
+              <?php endwhile; wp_reset_postdata(); ?>
+            </div>
+
+            <img src="<?php echo THEME_URL; ?>/images/general/faq-bg.svg" class="faq__bg" alt="">
+
+          </div>
+        </section>
+      <?php endif; ?>
     
     <?php endif;
 
