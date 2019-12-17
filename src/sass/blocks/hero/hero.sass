@@ -1,4 +1,8 @@
 .hero
+  padding-top: 0
+  padding-bottom: 10rem
+  +sm-block
+    padding-bottom: 5rem
   .container
     position: relative
   &__left
@@ -11,6 +15,7 @@
     +md-block
       padding-top: 5rem
     +sm-block
+      padding-bottom: 6rem
       text-align: center
     .btn
       margin-top: 5.5rem
@@ -94,19 +99,14 @@
         width: 60rem
       +sm-block
         width: auto
-      &::before
-        content: ''
-        position: absolute
-        top: 56%
-        left: 50%
-        transform: translate(-50%, -50%)
-        width: 13rem
-        height: 13rem
-        background: url(images/general/play-btn.svg) no-repeat center / contain
-        +trans
-        +sm-block
-          width: 8rem
-          height: 8rem
       &:hover
-        &::before
+        .btn-play
           transform: translate(-50%, -50%) scale(1.1)
+      .btn-play
+        position: absolute
+        top: 60%
+        left: 49%
+        transform: translate(-50%, -50%)
+        +from(768px)
+          width: 16rem
+          height: 16rem

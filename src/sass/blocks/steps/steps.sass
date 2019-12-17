@@ -1,0 +1,121 @@
+.steps
+  padding-top: 9rem
+
+.steps-list
+  &__item
+    +col
+    +size(3)
+    +size-md(6)
+    +size-sm(12)
+    position: relative
+    margin-bottom: 5rem
+    padding-top: 16rem
+    text-align: center
+    +sm-block
+      margin-bottom: 3rem
+      padding-top: 14rem
+      &:last-child
+        margin-bottom: 0
+    &:nth-child(2)
+      .steps-list
+        &__icon
+          &-wrap
+            &::before
+              background-image: url(images/general/step-circle-2.svg)
+            &::after
+              background-image: url(images/general/step-arrow-2.svg)
+              +md-block
+                display: none
+    &:nth-child(3)
+      .steps-list
+        &__icon
+          &-wrap
+            &::before
+              background-image: url(images/general/step-circle-3.svg)
+            &::after
+              background-image: url(images/general/step-arrow-3.svg)
+    &:nth-child(4)
+      .steps-list
+        &__icon
+          &-wrap
+            &::before
+              background-image: url(images/general/step-circle-4.svg)
+    &:last-child
+      .steps-list
+        &__icon
+          &-wrap
+            &::after
+              display: none
+    p
+      font-family: $second-font
+      font-size: 1.8rem
+      font-weight: 700
+      &:last-child
+        margin-bottom: 0
+  &__icon
+    &-wrap
+      position: absolute
+      top: 0
+      left: 50%
+      z-index: 1
+      transform: translateX(-50%)
+      width: 13rem
+      height: 13rem
+      background-color: #fff
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        background:
+          image: url(images/general/step-circle-1.svg)
+          repeat: no-repeat
+          position: center
+          size: contain
+        pointer-events: none
+      &::after
+        content: ''
+        position: absolute
+        top: 50%
+        left: 100%
+        z-index: -1
+        width: 17.3rem
+        height: 1.6rem
+        margin-top: -1.2rem
+        background:
+          image: url(images/general/step-arrow-1.svg)
+          repeat: no-repeat
+          position: center
+          size: contain
+        +lg-block
+          left: 70%
+        +md-block
+          left: 100%
+          width: 24rem
+          height: 2.2rem
+        +sm-block
+          display: none
+    &-inner
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 100%
+      height: 100%
+      background-color: #fff
+  &__number
+    position: absolute
+    top: 1rem
+    right: 0
+    width: 3rem
+    height: 3rem
+    font-family: $second-font
+    font-size: 1.8rem
+    font-weight: 700
+    color: $green
+    line-height: 3rem
+    border-radius: 50%
+    background-color: #fff
+    box-shadow: 0 1rem 1rem rgba(49, 56, 62, 0.15)
+    text-align: center

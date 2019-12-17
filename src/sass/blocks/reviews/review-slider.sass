@@ -1,0 +1,73 @@
+.reviews-slider
+  margin-right: -15px
+  margin-left: -15px
+  padding: 15px 15px 30px
+  &__item
+    &:first-child, &:first-child + div
+      .reviews-slider
+        &__inner
+          margin-left: auto
+          &::before
+            transform: rotate(180deg)
+    &.swiper-slide-active
+      .reviews-slider
+        &__inner
+          animation: fadeInRight 1s
+          animation-delay: 0.1s
+          animation-fill-mode: forwards
+      & + .swiper-slide-next + div
+        .reviews-slider
+          &__inner
+            animation: fadeInRight 1s
+            animation-fill-mode: forwards
+  &__inner
+    position: relative
+    z-index: 1
+    max-width: 47rem
+    padding: 4rem 5rem 5rem
+    background-color: #fff
+    box-shadow: 0 1rem 1.5rem rgba(49, 56, 62, 0.25)
+    border-radius: 1rem
+    opacity: 0
+    +trans
+    +lg-block
+      max-width: 40rem
+      padding: 4rem 3rem
+    +sm-block
+      margin: 0 auto
+    &::before
+      content: ''
+      position: absolute
+      right: 3rem
+      bottom: 3rem
+      z-index: -1
+      width: 10rem
+      height: 8rem
+      background: url(images/general/quote.svg) no-repeat center / contain
+  &__content
+    margin-bottom: 2rem
+    font-size: 2.4rem
+    line-height: 1.5
+    +md-block
+      font-size: 1.8rem
+    p
+      &:last-child
+        margin-bottom: 0
+  &__info
+    display: flex
+    align-items: center
+  &__photo
+    width: 7rem
+    height: 7rem
+    flex-shrink: 0
+    margin-right: 3rem
+    border-radius: 50%
+    overflow: hidden
+  &__name
+    margin: 0
+    font-family: $second-font
+    font-size: 2rem
+    font-weight: 700
+  &__position
+    font-size: 1.4rem
+    color: rgba($main-color, 0.7)

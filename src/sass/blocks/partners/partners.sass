@@ -1,0 +1,53 @@
+.partners
+  padding-bottom: 1.5rem
+  .container
+    position: relative
+  &__left
+    +col
+    +size(6)
+    +size-lg(5)
+    +size-md(12)
+  &__right
+    +col
+    +size(6)
+    +size-lg(7)
+    +size-md(12)
+    padding-left: 5rem
+    +lg-block
+      padding-left: 3rem
+    +md-block
+      padding-left: 0
+  &__bg
+    position: absolute
+    bottom: 4rem
+    left: -5rem
+    z-index: -1
+    pointer-events: none
+    +md-block
+      display: none
+
+.partners-list
+  display: flex
+  flex-wrap: wrap
+  margin-right: -35px
+  margin-left: -35px
+  +lg-block
+    margin-right: -25px
+    margin-left: -25px
+  +md-block
+    justify-content: center
+  &__item
+    margin-bottom: 8rem
+    padding: 0 35px
+    +lg-block
+      padding: 0 25px
+    +sm-block
+      margin-bottom: 3rem
+      &:last-child
+        margin-bottom: 0
+    &:nth-last-child(2)
+      margin-left: 23rem
+      +lg-block
+        margin-left: 21rem
+      +md-block
+        margin-left: 0

@@ -3,7 +3,9 @@
 global.jQuery = require('jquery');
 let svg4everybody = require('svg4everybody'),
   popup = require('jquery-popup-overlay'),
-  iMask = require('imask');
+  iMask = require('imask'),
+  fancybox = require('@fancyapps/fancybox'),
+  Swiper = require('swiper');
 
 jQuery(document).ready(function($) {
   // Toggle nav menu
@@ -51,6 +53,23 @@ jQuery(document).ready(function($) {
       });
     }
   };
+
+  // Slider
+  new Swiper('.reviews-slider', {
+    spaceBetween: 30,
+    speed: 0,
+    navigation: {
+      nextEl: '.reviews .swiper-button-next',
+      prevEl: '.reviews .swiper-button-prev',
+    },
+    breakpoints: {
+      993: {
+        slidesPerColumn: 2,
+        slidesPerColumnFill: 'row',
+        spaceBetween: 70,
+      }
+    }
+  });
 
 
   toggleNav();

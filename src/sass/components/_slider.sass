@@ -1,0 +1,33 @@
+.swiper-button-prev,
+.swiper-button-next
+  width: 8.5rem
+  height: 5.5rem
+  margin-top: -4.25rem
+  border-radius: 3rem
+  background-color: #fff
+  box-shadow: 0 1rem 1rem rgba(49, 56, 62, 0.15)
+  +trans
+  &::after
+    display: none
+  &:hover
+    background-color: $accent
+    box-shadow: 0 1rem 1rem rgba(252, 173, 55, 0.35)
+    svg
+      fill: #fff
+  &:focus
+    outline: none
+  svg
+    width: 2.5rem
+    height: 1rem
+    fill: rgba($main-color, 0.5)
+    +trans
+
+.slider-btns
+  display: flex
+  align-items: center
+  .swiper-button-prev,
+  .swiper-button-next
+    position: static
+    margin: 0
+  .swiper-button-prev
+    margin-right: 2rem
