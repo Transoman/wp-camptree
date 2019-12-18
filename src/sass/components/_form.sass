@@ -3,11 +3,38 @@
   margin-bottom: 20px
 .form-field
   width: 100%
-  padding: 15px 25px
-  border: 1px solid #C4C4C4
-  border-radius: 5px
+  padding: 1.65rem 2.5rem
+  border: 0.2rem solid $iron
+  border-radius: 3rem
   box-shadow: none
   appearance: none
+  font-family: $second-font
+  color: $main-color
+  line-height: 1
+  +trans
+  &::placeholder
+    color: rgba($main-color, 0.5)
   &:focus
     outline: none
     border-color: $accent
+.form-label
+  display: block
+  margin-bottom: 1rem
+  padding-left: 2.5rem
+  font-family: $second-font
+  font-size: 1.4rem
+  font-weight: 700
+  cursor: pointer
+
+
+#mc_embed_signup
+  div
+    &.mce_inline_error
+      position: absolute
+      bottom: 0.5rem
+      right: 1.5rem
+      margin: 0 !important
+      padding: 0 !important
+      background: none !important
+      color: #6B0505 !important
+      font-size: 1.1rem

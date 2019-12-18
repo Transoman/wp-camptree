@@ -1,0 +1,58 @@
+.request
+  padding-bottom: 12rem
+  +from(993px)
+    padding-top: 18rem
+  .container
+    position: relative
+    z-index: 1
+  .section-head
+    margin-bottom: 3.5rem
+  .section-title
+    margin-bottom: 1.5rem
+  .section-descr
+    font-size: 2rem
+  &__wrap
+    max-width: 74rem
+    margin-left: 7rem
+    padding: 5rem 6rem 4rem
+    background-color: #fff
+    box-shadow: 0 0 1.5rem rgba(49, 56, 62, 0.25)
+    border-radius: 1rem
+    +md-block
+      margin: 0 auto
+    +xs-block
+      padding: 3rem 2rem 2rem
+  &__form
+    &-row
+      +u-row-flex(20px)
+    .form-group
+      +u-col(20px)
+      +u-size(6, 12, 20px)
+      +sm-block
+        +u-size(12, 12, 20px)
+      &--btn
+        align-self: flex-end
+    .btn
+      width: 100%
+      padding-right: 2rem
+      padding-left: 2rem
+  &__bg
+    position: absolute
+    right: -15.5rem
+    bottom: -20.5rem
+    z-index: -1
+    +md-block
+      width: 70%
+    +sm-block
+      right: -15vw
+      bottom: -15.5rem
+  &__bg-2
+    position: absolute
+    bottom: -17.5rem
+    left: -18rem
+    z-index: -1
+    +md-block
+      width: 70%
+    +sm-block
+      left: -10vw
+      bottom: -14.5rem

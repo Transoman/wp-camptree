@@ -1,0 +1,65 @@
+.cta
+  +from(993px)
+    padding-top: 11.5rem
+  .container
+    position: relative
+    z-index: 1
+  .section-title
+    margin-bottom: 3rem
+  &__content
+    +col
+    +size(6)
+    +size-md(7)
+    +size-sm(12)
+    +shift-left(6)
+    +shift-md-left(5)
+    padding-left: 7rem
+    padding-bottom: 8.5rem
+    +lg-block
+      padding-left: 0
+    +sm-block
+      margin-left: 15px
+      //padding-bottom: 62.5vw
+      text-align: center
+    .btn
+      margin-top: 6.5rem
+      +sm-block
+        margin-top: 4rem
+  &__descr
+    font-family: $second-font
+    font-size: 3.4rem
+    line-height: 1.4
+    +md-block
+      font-size: 2.8rem
+    +sm-block
+      font-size: 2.2rem
+      br
+        display: none
+    &:last-of-type
+      margin-bottom: 0
+  &__bg
+    position: absolute
+    left: -28.5rem
+    top: -21.5rem
+    z-index: -1
+    pointer-events: none
+    +md-block
+      top: -6.5rem
+      left: -22rem
+      width: 70%
+    +sm-block
+      top: auto
+      bottom: 0
+      left: 0
+      display: none
+  &__bg-2
+    position: absolute
+    right: -8rem
+    bottom: 0
+    z-index: -1
+    pointer-events: none
+    +md-block
+      width: 25%
+    +sm-block
+      right: 0
+      width: 40%
