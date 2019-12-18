@@ -97,8 +97,6 @@ jQuery(document).ready(function($) {
     let header = $('.header');
     let h = header.outerHeight();
 
-    console.log(h);
-
     if (e.scrollTop() > 1000) {
       $('body').css('padding-top', h);
       header.addClass('fixed');
