@@ -1,1 +1,47 @@
 .footer
+  position: relative
+  padding: 9rem 0 4rem
+  font-family: $second-font
+  font-weight: 700
+  color: rgba($main-color, 0.5)
+  background: url(images/general/footer-bg.svg) no-repeat center top / cover
+  &__wrap
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+    margin: 0 -15px
+    +sm-block
+      flex-direction: column
+      text-align: center
+      & > *:not(:last-child)
+        margin-bottom: 2rem
+  &__bg
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    width: 100%
+
+.copy
+  margin: 0
+  padding: 0 15px
+
+.footer-menu
+  margin: 0
+  padding: 0 15px
+  list-style: none
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  li
+    &::after
+      content: '|'
+      margin: 01rem
+    &:last-child
+      &::after
+        display: none
+  a
+    color: rgba($main-color, 0.5)
+    &:hover, &:focus
+      color: $main-color

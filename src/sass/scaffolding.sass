@@ -18,8 +18,8 @@
 
 /* Common styles */
 html
+  height: 100%
   font-size: 62.5%
-  overflow-x: hidden
 
 body
   margin: 0
@@ -34,6 +34,12 @@ body
   &.nav-open
     +md-block
       overflow: hidden
+  &.admin-bar
+    .header
+      &.nav-down
+        top: 32px
+        +to(782px)
+          top: 46px
 
 img
   max-width: 100%

@@ -11,9 +11,7 @@
     "wpackagist-plugin/clearfy": "*",
     "wpackagist-plugin/ewww-image-optimizer": "*",
     "wpackagist-plugin/safe-svg": "*",
-    "wpackagist-plugin/force-regenerate-thumbnails": "*",
-    "wpackagist-plugin/wordpress-seo": "*",
-    "wpackagist-plugin/contact-form-7": "*"
+    "wpackagist-plugin/wordpress-seo": "*"
   },
   "extra": {
     "wordpress-install-dir": "app/wp",

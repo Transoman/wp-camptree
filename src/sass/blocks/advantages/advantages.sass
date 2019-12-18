@@ -1,6 +1,7 @@
 .advantages
-  padding-top: 6rem
-  padding-bottom: 0
+  +from(768px)
+    padding-top: 6rem
+    padding-bottom: 0
 
 .advantages-list
   &__item
@@ -15,6 +16,8 @@
     +sm-block
       padding-top: 10rem
       margin-bottom: 3rem
+      &:last-child
+        margin-bottom: 0
     p
       font-size: 1.8rem
       line-height: 1.5

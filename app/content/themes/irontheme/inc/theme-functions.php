@@ -46,6 +46,7 @@ if ( ! function_exists( 'ith_setup' ) ) :
     // This theme uses wp_nav_menu() in one location.
     register_nav_menus( array(
       'primary' => esc_html__( 'Primary', 'ith' ),
+      'footer' => esc_html__( 'Footer', 'ith' ),
     ) );
 
     /*
@@ -60,26 +61,8 @@ if ( ! function_exists( 'ith_setup' ) ) :
       'caption',
     ) );
 
-    // Set up the WordPress core custom background feature.
-    add_theme_support( 'custom-background', apply_filters( 'ith_custom_background_args', array(
-      'default-color' => 'ffffff',
-      'default-image' => '',
-    ) ) );
-
     // Add theme support for selective refresh for widgets.
     add_theme_support( 'customize-selective-refresh-widgets' );
-
-    /**
-     * Add support for core custom logo.
-     *
-     * @link https://codex.wordpress.org/Theme_Logo
-     */
-    add_theme_support( 'custom-logo', array(
-      'height'      => 250,
-      'width'       => 250,
-      'flex-width'  => true,
-      'flex-height' => true,
-    ) );
 
     /**
      * Add support formats post
@@ -111,24 +94,6 @@ function ith_content_width() {
 add_action( 'after_setup_theme', 'ith_content_width', 0 );
 
 /**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function ith_widgets_init() {
-  register_sidebar( array(
-    'name'          => esc_html__( 'Sidebar', 'ith' ),
-    'id'            => 'sidebar-1',
-    'description'   => esc_html__( 'Add widgets here.', 'ith' ),
-    'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</div>',
-    'before_title'  => '<h3 class="widget-title">',
-    'after_title'   => '</h3>',
-  ) );
-}
-add_action( 'widgets_init', 'ith_widgets_init' );
-
-/**
  * Enqueue scripts and styles.
  */
 function ith_scripts() {
@@ -146,15 +111,6 @@ add_action( 'wp_enqueue_scripts', 'ith_scripts' );
  * Remove tag p in CF7
  */
 add_filter( 'wpcf7_autop_or_not', '__return_false' );
-
-/**
- * Validate Phone Number CF7
- */
-function custom_filter_wpcf7_is_tel( $result, $tel ) {
-	$result = preg_match( '/\+[0-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{4}/', $tel );
-	return $result;
-}
-add_filter( 'wpcf7_is_tel', 'custom_filter_wpcf7_is_tel', 10, 2 );
 
 function js_variables(){
   $variables = array (

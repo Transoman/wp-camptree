@@ -406,7 +406,7 @@ if ( have_rows('home_layout') ):
 
             <div class="request__form">
               <div id="mc_embed_signup">
-                <form action="" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
+                <form action="https://camptree.us18.list-manage.com/subscribe/post?u=0d5082c3287b75c366bb2239b&amp;id=0dc27f002f" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" method="post">
                   <div id="mc_embed_signup_scroll">
                     <div class="request__form-row">
                       <div class="mc-field-group form-group">
