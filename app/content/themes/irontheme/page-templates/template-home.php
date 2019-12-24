@@ -19,6 +19,7 @@ if ( have_rows('home_layout') ):
               <?php $title_1 = get_sub_field( 'title_1' );
               $title_2 = get_sub_field( 'title_2' );
               $descr = get_sub_field( 'description' );
+              $btn = get_sub_field( 'btn' );
 
               if ($title_1): ?>
                 <p class="hero__suptitle"><?php echo $title_1; ?></p>
@@ -33,7 +34,9 @@ if ( have_rows('home_layout') ):
               </div>
               <?php endif; ?>
 
-              <a href="#" class="btn">Get a Price</a>
+              <?php if ($btn['url'] && $btn['title']): ?>
+                <a href="<?php echo esc_url($btn['url']); ?>" class="btn"<?php echo $btn['target'] ? ' target="'. $btn['target'] .'"' : '' ;?>><?php echo $btn['title']; ?></a>
+              <?php endif; ?>
 
             </div>
 

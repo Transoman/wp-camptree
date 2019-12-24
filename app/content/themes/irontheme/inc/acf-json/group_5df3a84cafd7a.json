@@ -80,6 +80,21 @@
                             "new_lines": "wpautop"
                         },
                         {
+                            "key": "field_5e01b7d80ca72",
+                            "label": "Button",
+                            "name": "btn",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        },
+                        {
                             "key": "field_5df3ab4a3b4bf",
                             "label": "Video link",
                             "name": "video_link",
@@ -877,5 +892,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1576655903
+    "modified": 1577170925
 }
